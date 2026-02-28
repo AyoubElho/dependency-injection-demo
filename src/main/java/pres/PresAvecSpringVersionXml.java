@@ -9,7 +9,7 @@ public class PresAvecSpringVersionXml {
     static void main() {
         ApplicationContext applicationContext = new
                 ClassPathXmlApplicationContext("config.xml");
-        IMetier iMetier = (IMetier) applicationContext.getBean("metier");
+        IMetier iMetier = applicationContext.getBean(IMetier.class);
         System.out.println(iMetier.calcul());
     }
 }
